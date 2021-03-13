@@ -1,0 +1,64 @@
+.App {
+  overflow: hidden;
+
+  font-family: sans-serif;
+  text-align: center;
+  background-color: yellow;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.scrollable-wrapper {
+  position: relative;
+  max-height: 500px;
+  background-color: blue;
+  margin-right: -17px;
+}
+
+.scrollable-wrapper:before,
+.scrollable-wrapper:after {
+  position: absolute;
+  left: 50%;
+  
+  display: block;
+  
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff9f;
+  
+  transform: translateX(-50%);
+}
+
+.scrollable-wrapper:before {
+  top: 0;
+  content: 'TOP'
+}
+
+.scrollable-wrapper:after {
+  bottom: 0;
+  content: 'BOTTOM'
+}
+
+.scrollable-inner {
+  position: relative;
+  z-index: 1;
+}
+
+ul {
+  padding: 0;
+}
+
+li:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+li:nth-child(even) {
+  background-color: #d4d4d4;
+}
+
+li {
+  list-style-type: none;
+}
